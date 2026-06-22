@@ -1,0 +1,121 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D9488;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EA580C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DC2626;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7C2D12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A21CAF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#F8FAFC"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1E293B">Document Processing Pipeline Architecture</text>
+  
+  <!-- User Upload -->
+  <rect x="50" y="60" width="120" height="40" rx="8" fill="url(#blueGradient)" stroke="#3730A3" stroke-width="2"/>
+  <text x="110" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">User Upload</text>
+  
+  <!-- OCR & Preprocessing -->
+  <rect x="220" y="60" width="140" height="40" rx="8" fill="url(#blueGradient)" stroke="#3730A3" stroke-width="2"/>
+  <text x="290" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">OCR &amp;</text>
+  <text x="290" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Preprocessing</text>
+  
+  <!-- Semantic Chunking -->
+  <rect x="410" y="60" width="140" height="40" rx="8" fill="url(#blueGradient)" stroke="#3730A3" stroke-width="2"/>
+  <text x="480" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Semantic</text>
+  <text x="480" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Chunking</text>
+  
+  <!-- Embedding & Vector DB -->
+  <rect x="600" y="60" width="140" height="40" rx="8" fill="url(#blueGradient)" stroke="#3730A3" stroke-width="2"/>
+  <text x="670" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Embedding &amp;</text>
+  <text x="670" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Vector DB</text>
+  
+  <!-- Rule-based Extractor -->
+  <rect x="220" y="160" width="140" height="40" rx="8" fill="url(#greenGradient)" stroke="#047857" stroke-width="2"/>
+  <text x="290" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Rule-based</text>
+  <text x="290" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Extractor</text>
+  
+  <!-- Hybrid Retrieval -->
+  <rect x="600" y="160" width="140" height="40" rx="8" fill="url(#greenGradient)" stroke="#047857" stroke-width="2"/>
+  <text x="670" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Hybrid Retrieval</text>
+  <text x="670" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">(BM25 + Vector)</text>
+  
+  <!-- Calculation Engine -->
+  <rect x="220" y="260" width="140" height="40" rx="8" fill="url(#orangeGradient)" stroke="#C2410C" stroke-width="2"/>
+  <text x="290" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Calculation</text>
+  <text x="290" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Engine</text>
+  
+  <!-- LLM Reasoning Layer -->
+  <rect x="600" y="260" width="140" height="40" rx="8" fill="url(#orangeGradient)" stroke="#C2410C" stroke-width="2"/>
+  <text x="670" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">LLM Reasoning</text>
+  <text x="670" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Layer</text>
+  
+  <!-- Multi-Document Aggregator -->
+  <rect x="420" y="360" width="160" height="40" rx="8" fill="url(#purpleGradient)" stroke="#7C2D12" stroke-width="2"/>
+  <text x="500" y="378" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Multi-Document</text>
+  <text x="500" y="392" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Aggregator</text>
+  
+  <!-- Explainability & Privacy -->
+  <rect x="420" y="460" width="160" height="40" rx="8" fill="url(#purpleGradient)" stroke="#7C2D12" stroke-width="2"/>
+  <text x="500" y="478" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Explainability &amp;</text>
+  <text x="500" y="492" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Privacy</text>
+  
+  <!-- Final Answer -->
+  <rect x="380" y="540" width="200" height="40" rx="8" fill="#1F2937" stroke="#374151" stroke-width="2"/>
+  <text x="480" y="558" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Final Answer</text>
+  <text x="480" y="572" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#D1D5DB">(JSON + Explanation)</text>
+  
+  <!-- Arrows -->
+  <!-- Horizontal flow -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#374151"/>
+    </marker>
+  </defs>
+  
+  <!-- Top horizontal flow -->
+  <line x1="170" y1="80" x2="215" y2="80" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="365" y1="80" x2="405" y2="80" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="555" y1="80" x2="595" y2="80" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Vertical arrows down -->
+  <line x1="290" y1="105" x2="290" y2="155" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="670" y1="105" x2="670" y2="155" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Vertical arrows down to processing -->
+  <line x1="290" y1="205" x2="290" y2="255" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="670" y1="205" x2="670" y2="255" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Diagonal arrows to aggregator -->
+  <line x1="360" y1="280" x2="420" y2="370" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="600" y1="280" x2="580" y2="370" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Vertical flow to final -->
+  <line x1="500" y1="405" x2="500" y2="455" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="500" y1="505" x2="500" y2="535" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Legend -->
+  <rect x="20" y="520" width="280" height="70" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="30" y="540" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1E293B">Legend:</text>
+  <rect x="30" y="545" width="15" height="10" fill="url(#blueGradient)"/>
+  <text x="50" y="554" font-family="Arial, sans-serif" font-size="10" fill="#475569">Data Processing</text>
+  <rect x="130" y="545" width="15" height="10" fill="url(#greenGradient)"/>
+  <text x="150" y="554" font-family="Arial, sans-serif" font-size="10" fill="#475569">Analysis &amp; Retrieval</text>
+  <rect x="30" y="560" width="15" height="10" fill="url(#orangeGradient)"/>
+  <text x="50" y="569" font-family="Arial, sans-serif" font-size="10" fill="#475569">Reasoning &amp; Computation</text>
+  <rect x="170" y="560" width="15" height="10" fill="url(#purpleGradient)"/>
+  <text x="190" y="569" font-family="Arial, sans-serif" font-size="10" fill="#475569">Output Processing</text>
+</svg>

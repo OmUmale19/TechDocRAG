@@ -1,0 +1,63 @@
+# Virtual environments
+techdoc_env/
+TechDocRAG/techdoc_env/
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Environment variables (contains secrets)
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Logs
+*.log
+logs/
+TechDocRAG/logs/
+
+# Cache
+cache/
+TechDocRAG/cache/
+.cache/
+
+# Byte-compiled
+*.pyc
+
+# Embeddings cache (large binary files)
+*.pkl
+
+# Distribution / archives
+*.tar.gz
+*.whl
+*.zip
+
+# Jupyter
+.ipynb_checkpoints/
+
+# pytest
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Data directory (user-specific)
+TechDocRAG/data/

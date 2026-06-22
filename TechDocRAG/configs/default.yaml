@@ -1,0 +1,111 @@
+# Default configuration for TechDocRAG
+# This file contains the base configuration that can be overridden by environment variables
+
+# OCR Configuration
+ocr:
+  primary_engine: "tesseract"  # tesseract, azure, aws
+  fallback_engines: ["tesseract", "easyocr"]
+  confidence_threshold: 0.6
+  tesseract_path: null  # Auto-detect
+  azure_endpoint: null  # Set via environment
+  azure_key: null  # Set via environment
+  aws_region: "us-east-1"
+
+# Embedding Configuration
+embedding:
+  model_name: "all-MiniLM-L6-v2"  # Fast and accurate for most use cases
+  model_provider: "sentence-transformers"
+  dimension: 384
+  batch_size: 32
+  device: "cpu"  # Change to "cuda" if GPU available
+  cache_embeddings: true
+
+# Vector Database Configuration
+vector_db:
+  provider: "faiss"  # Local deployment friendly
+  index_type: "flat"  # Simple and reliable
+  similarity_metric: "cosine"
+  storage_path: "./data/vector_store"
+  # Pinecone settings (for cloud deployment)
+  pinecone_api_key: null
+  pinecone_environment: null
+  # Chroma settings (for scalable local deployment)
+  chroma_host: "localhost"
+  chroma_port: 8000
+
+# Language Model Configuration
+llm:
+  provider: "gemini"  # Gemini LLM for answer synthesis
+  model_name: "gemini-2.0-flash"  # Google Gemini 2.0 Flash model (faster, free tier)
+  api_key: null  # Set via GEMINI_API_KEY environment variable
+  base_url: null
+  temperature: 0.1  # Low temperature for consistent responses
+  max_tokens: 2048
+  timeout: 30
+  retry_attempts: 3
+  enable_synthesis: true  # Enable LLM-powered answer synthesis
+
+# Retrieval Configuration
+retrieval:
+  top_k_semantic: 10
+  top_k_keyword: 5
+  fusion_alpha: 0.6  # 60% semantic, 40% keyword
+  rerank_model: null  # Optional reranking
+  enable_query_expansion: true
+  enable_hypothetical_questions: true
+
+# Document Processing Configuration
+processing:
+  chunk_size: 512  # Optimal for most embedding models
+  chunk_overlap: 50  # 10% overlap
+  min_chunk_size: 100
+  max_chunk_size: 1024
+  enable_table_extraction: true
+  enable_image_extraction: true
+  enable_layout_analysis: true
+
+# Security Configuration
+security:
+  enable_pii_detection: true
+  pii_confidence_threshold: 0.8
+  mask_pii_in_responses: true
+  enable_audit_logging: true
+  audit_log_path: "./logs/audit.log"
+  encryption_key_path: null
+
+# Performance Configuration
+performance:
+  max_concurrent_requests: 100
+  request_timeout: 300  # 5 minutes
+  cache_size: 1000
+  enable_batch_processing: true
+  batch_size: 10
+  enable_async_processing: true
+
+# General Settings
+debug: false
+log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+data_dir: "./data"
+cache_dir: "./cache"
+
+# Domain-specific settings
+domains:
+  finance:
+    enable_calculation_engine: true
+    currency_detection: true
+    date_formats: ["MM/DD/YYYY", "DD/MM/YYYY", "YYYY-MM-DD"]
+    
+  legal:
+    enable_clause_detection: true
+    enable_entity_extraction: true
+    jurisdiction_detection: true
+    
+  hr:
+    enable_skill_extraction: true
+    enable_experience_calculation: true
+    anonymize_personal_info: true
+    
+  healthcare:
+    enable_medical_entity_extraction: true
+    hipaa_compliance: true
+    anonymize_patient_data: true
